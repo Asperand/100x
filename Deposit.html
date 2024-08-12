@@ -1,0 +1,68 @@
+  <html>
+<head>
+<meta name="description" content="100X is an online betting game that enables you to select a lucky number and bet on it. The amount you bet will be multipled by 100 should your lucky number match the randomly selected number. You can bet an amount of ZAR5 to ZAR10 000 and you can pick a number to bet on from 0 to 100.">
+<title>Load Funds Into Your 100X Account </title>
+<script src="main.js"></script>
+<script src="machine.js"></script>
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="responsive.css">
+<link rel="favicon" href="favicon.ico">
+<link rel="shortcut icon" href="icon.png">
+<meta name="viewport" content="width=device-width">
+<script src="users.js"></script>
+<style></style>
+</head>
+<body>
+<div id="header" class="general">
+<div class="menuicon" tabindex="2" onclick="location = 'index.html'; "><</div>
+<div class="logo" tabindex="2">Deposit</div>
+</div>
+<div id="content" class="general">
+<div id="window">
+<div id="wlist">
+<div class="wheading">Load funds into your 100X account<br/>
+<font class="hbal">The minimum amount you can deposit is ZAR10. For further assistance regarding deposits <a href="Support.html">contact support</a>.</div><br/>
+<div class="wlisting"><div class="withopt ov" onfocus="expand(this)" tabindex="2">1Voucher &#x25BC;</div><span class="data">
+<input type="number" id="vp" name="pin" class="fwith" placeholder="1Voucher Pin" value="" min="11" max="3000">
+<button onclick="deposit(this,'1voucher')" class="phot">Deposit</button>
+</span>
+</div><br/><div class="wlisting"><div class="withopt ott" onfocus="expand(this)" tabindex="2">OTT Voucher &#x25BC;</div><span class="data">
+<input type="number" id="vp" name="pin" class="fwith" placeholder="OTT Voucher Pin" value="" min="11" max="3000">
+<button onclick="deposit(this,'ott')" class="phot">Deposit</button>
+</span>
+</div><br/><div class="wlisting"><div class="withopt standardbank" onfocus="expand(this)" tabindex="2">Instant Money Voucher &#x25BC;</div><span class="data">
+<input type="number" id="vp" name="pin" class="fwith" placeholder="Voucher Number" value="" min="8" max="15">
+<input type="number" id="vc" name="cpin" class="fwith" placeholder="Pin Code" value="" min="4" max="6">
+<button onclick="deposit(this,'stb')" class="phot">Deposit</button>
+</span>
+</div><br/><div class="wlisting"><div class="withopt nedbank" onfocus="expand(this)" tabindex="2">Send iMali Voucher  &#x25BC;</div><span class="data">
+<input type="number" id="vp" name="pin" class="fwith" placeholder="Voucher Number" value="" min="8" max="15">
+<input type="number" id="vc" name="cpin" class="fwith" placeholder="Pin Code" value="" min="4" max="6">
+<button onclick="deposit(this,'nedb')" class="phot">Deposit</button>
+</span>
+</div><br/><div class="wlisting"><div class="withopt capitec" onfocus="expand(this)" tabindex="2">Capitec Voucher  &#x25BC;</div><span class="data">
+<input type="number" id="vp" name="pin" class="fwith" placeholder="Voucher Number" value="" min="8" max="15">
+<input type="number" id="vc" name="cpin" class="fwith" placeholder="Pin Code" value="" min="4" max="6">
+<button onclick="deposit(this,'capb')" class="phot">Deposit</button>
+</span>
+</div><br/>
+<br/><br/>
+
+</div>
+</div>
+</div>
+<script>
+deposit = function(t,e) {
+	vp = t.parentNode.querySelector('#vp').value;
+	if(t.parentNode.querySelector('#vc'))
+	{
+	vc = t.parentNode.querySelector('#vc').value;
+	str = "/?pin=" + vp + "&code=" + vc + "&meth=" + e;
+	} else {
+	vc = "none"
+	str = "/?pin=" + vp + "&code=" + vc + "&meth=" + e;
+	}
+	alert(str);
+//window.location = "deposit.php?"
+}
+</script>

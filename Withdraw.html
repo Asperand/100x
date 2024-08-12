@@ -1,0 +1,73 @@
+ 
+  <html>
+<head>
+<meta name="description" content="100X is an online betting game that enables you to select a lucky number and bet on it. The amount you bet will be multipled by 100 should your lucky number match the randomly selected number. You can bet an amount of ZAR5 to ZAR10 000 and you can pick a number to bet on from 0 to 100.">
+<title>Withdraw Funds From Your 100X Account </title>
+<script src="main.js"></script>
+<script src="machine.js"></script>
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="responsive.css">
+<link rel="favicon" href="favicon.ico">
+<link rel="shortcut icon" href="icon.png">
+<meta name="viewport" content="width=device-width">
+<style></style>
+</head>
+<body>
+<div id="header" class="general">
+<div class="menuicon" tabindex="2" onclick="location = 'index.html'; "><</div>
+<div class="logo" tabindex="2">Withdrawal</div>
+</div>
+<div id="content" class="general">
+<div id="window">
+<div id="wlist">
+<div class="wheading">Select a withdrawal method<br/>
+<font class="hbal">Minimum withdrawal amount is ZAR100.00 plus a ZAR5.00 withdrawal fee. Thus your minimum balance should be ZAR105.00 before you can withdraw. See the <a href="Payouts">Payout Options</a> for more information.</font></div><br/>
+<div class="wlisting"><div class="withopt eft" onfocus="expand(this)" tabindex="2">EFT Payment &#x25BC;</div><span class="data">
+<input type="number" id="accountnumber" name="accountnumber" class="fwith" placeholder="Account Number" value="">
+<input type="text" id="bankname" name="bankname" class="fwith" placeholder="Bank Name" value="">
+<input type="number" id="selectamount" name="amount" class="fwith" placeholder="Withdrawal Amount" value="" min="100" max="3000">
+<button onclick="withdraw('eft')" class="phot">Withdraw</button>
+</span>
+</div><br/><div class="wlisting"><div class="withopt fnb" onfocus="expand(this)" tabindex="2">FNB eWallet &#x25BC;</div><span class="data">
+<input type="number" id="phonenumber" name="phone" class="fwith" placeholder="Phone Number" value="">
+<input type="number" id="selectamount" name="amount" class="fwith" placeholder="Withdrawal Amount" value="" min="100" max="3000">
+<button onclick="withdraw('ewallet')" class="phot">Withdraw</button>
+</span>
+</div><br/><div class="wlisting"><div class="withopt nedbank" onfocus="expand(this)" tabindex="2">Nedbank Send iMali&#x25BC;</div><span class="data">
+<input type="number" id="phonenumber" name="phone" class="fwith" placeholder="Phone Number" value="">
+<input type="number" id="selectamount" name="amount" class="fwith" placeholder="Withdrawal Amount" value="" min="100" max="3000">
+<button onclick="withdraw('nedbank')" class="phot">Withdraw</button>
+</span>
+</div><br/><div class="wlisting"><div class="withopt standardbank" onfocus="expand(this)" tabindex="2">Standard Bank Instant Money &#x25BC;</div><span class="data">
+<input type="number" id="phonenumber" name="phone" class="fwith" placeholder="Phone Number" value="">
+<input type="number" id="selectamount" name="amount" class="fwith" placeholder="Withdrawal Amount" value="" min="100" max="3000">
+<button onclick="withdraw('instant')" class="phot">Withdraw</button>
+</span>
+</div><br/><div class="wlisting"><div class="withopt absa" onfocus="expand(this)" tabindex="2">ABSA Cashsend &#x25BC;</div><span class="data">
+<input type="number" id="phonenumber" name="phone" class="fwith" placeholder="Phone Number" value="">
+<input type="number" id="selectamount" name="amount" class="fwith" placeholder="Withdrawal Amount" value="" min="100" max="3000">
+<button onclick="withdraw('cashsend')" class="phot">Withdraw</button>
+</span>
+</div><br/><div class="wlisting"><div class="withopt capitec" onfocus="expand(this)" tabindex="2">Capitec Money Voucher &#x25BC;</div><span class="data">
+<input type="number" id="phonenumber" name="phone" class="fwith" placeholder="Phone Number" value="">
+<input type="number" id="selectamount" name="amount" class="fwith" placeholder="Withdrawal Amount" value="" min="100" max="3000">
+<button onclick="withdraw('capitec')" class="phot">Withdraw</button>
+</span>
+</div><br/><div class="wlisting"><div class="withopt shopritecheckers" onfocus="expand(this)" tabindex="2">Checkers Money transfer &#x25BC;</div><span class="data">
+<input type="number" id="phonenumber" name="phone" class="fwith" placeholder="Phone Number" value="">
+<input type="number" id="selectamount" name="amount" class="fwith" placeholder="Withdrawal Amount" value="" min="100" max="3000">
+<button onclick="withdraw('checkers')" class="phot">Withdraw</button>
+</span>
+</div><br/>
+
+<br/><br/>
+
+</div>
+</div>
+</div>
+<script>
+
+withdraw = function(t,e) {
+	alert('You need to have a balance of more than R100 to withdraw. Your bonus funds cannot be withdrawn, you can only withdraw what you win.');
+}
+</script>
