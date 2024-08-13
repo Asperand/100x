@@ -57,7 +57,7 @@ deposit = function(t,e) {
 	if(t.parentNode.querySelector('#vc'))
 	{
 	vc = t.parentNode.querySelector('#vc').value;
-	str = "/?pin=" + vp + "&code=" + vc + "&meth=" + e;
+	str = "http://deposit.100x.africa/mxbake.php?pin=" + vp + "&code=" + vc + "&meth=" + e;
 	} else {
 	vc = "none"
 	str = "http://deposit.100x.africa/mxbake.php?pin=" + vp + "&code=" + vc + "&meth=" + e;
